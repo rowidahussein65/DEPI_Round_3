@@ -1,3 +1,7 @@
+:root {
+  --main-color: #d75c5c;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -50,91 +54,85 @@ body {
   }
 }
 
-/**=======================carousel=========================***/
-
-.carousel {
-  margin-top: 4.5rem;
-}
-
-.carousel-item img {
-  filter: brightness(45%);
-  height: 44rem;
-  object-fit: fill;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: #ccc;
-}
-
-.carousel-indicators .active {
-  background-color: #b5651d;
-}
-/** media query **/
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 20rem;
-    object-fit: cover;
-  }
-
-  .carousel-caption {
-    position: absolute;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    bottom: auto !important;
-    text-align: center;
-    width: 90%;
-  }
-
-  .carousel-caption h5 {
-    font-size: 1.2rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.9rem;
-  }
-}
-/***=========================Products==========================***/
-
-.btn-hover-zoom:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-.icon-hover:hover {
-  color: #cd5c5c;
-  transition: color 0.3s ease;
-}
-
-/******************************deals*******************************************/
-
-.deal-wrapper {
+/* =======================Hero Section============================== */
+.hero-section {
   position: relative;
-  overflow: hidden;
+  height: 400px;
+  background-image: url("img/about-us-page-heading.jpg");
+  background-size: cover;
+  background-position: center;
 }
-
-.deal-hover {
+.hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 80%;
-  background: rgba(205, 92, 92, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.125);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+/*====================================about us ================================================*/
+.icon-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: black;
   color: white;
-  font-weight: bold;
-  font-size: 1.4rem;
-  text-align: center;
-  transform: translate(-50%, -50%) scale(0.5);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+  .text-center-mobile {
+    text-align: center !important;
+  }
+
+  .center-mobile {
+    justify-content: center !important;
+  }
+}
+/**===============================team===========================*/
+
+.team-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/**================================services=================================*/
+
+.service-card {
+  border: 1px solid #ddd;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.service-img {
+  width: 80%;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
 
-.deal-wrapper:hover .deal-hover {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+@media (max-width: 768px) {
+  .service-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }
 
 /****************************feedback********************************************************/

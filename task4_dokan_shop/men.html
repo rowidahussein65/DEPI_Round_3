@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="men.css" />
+    <link rel="icon" href="img/main-logo.png" />
+    <title>Dokan Shop | men's products</title>
+  </head>
+  <body>
+    <!------------------------------ Navbar-------------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="fa-solid fa-user-secret me-2"></i> Dokan Shop
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          title="nav_button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Latest Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Top Deals</a>
+            </li>
+            <li class="nav-item register">
+              <a class="nav-link" href="index.html">Log In</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="pagesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu bg-dark" aria-labelledby="pagesDropdown">
+                <li>
+                  <a class="dropdown-item text-white" href="AboutUs.html"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="men.html">Men's</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="women.html">Women's</a>
+                </li>
+                <li><a class="dropdown-item text-white" href="Kids.html">Kids</a></li>
+                <li>
+                  <a class="dropdown-item text-white" href="Accessories.html">Accessories</a>
+                </li>
+                <li><hr class="dropdown-divider border-light" /></li>
+                <li>
+                  <a class="dropdown-item text-white" href="ContactUs.html">Contact Us</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!---------------------------- Hero Section-------------------------------------------- -->
+    <section class="hero-section d-flex align-items-center">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container text-center text-white">
+        <h1 class="fw-bold mb-3">Check our products</h1>
+        <p class="lead mx-auto" style="max-width: 800px">
+          "Style is something each of us already has, all we need to do is find
+          it."
+        </p>
+      </div>
+    </section>
+
+    <!-----------------------------men's fashion--------------------------------------------------------->
+
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Men's Fashion</h2>
+        <p class="text-muted">Check out all of our products</p>
+      </div>
+
+      <div id="product-list" class="row g-4"></div>
+
+      <button id="loadMore" class="btn btn-secondary mt-4 d-block mx-auto">
+        Load More
+      </button>
+    </div>
+
+    <script>
+      const products = [
+        {
+          img: "img/AKAI Printed Cotton T-Shirt First Rate For Men - Black25.jpg",
+          name: "AKAI Printed Cotton T.Shirt First Rate For Men",
+          price: "$75.00",
+        },
+        {
+          img: "img/American Eagle AE Super Soft Graphic T-Shirt24.jpg",
+          name: "American Eagle Super Soft Graphic T.Shirt",
+          price: "$60.00",
+        },
+        {
+          img: "img/American Eagle PIQUE SLIM TIPPING SOLIDS23.jpg",
+          name: "American Eagle PIQUE SLIM TIPPING SOLIDS",
+          price: "$110.0",
+        },
+        {
+          img: "img/American Eagle Ripped Dad Jean .06.jpg",
+          name: "American Eagle Ripped Dad Jean",
+          price: "$240.0",
+        },
+        {
+          img: "img/American Eagle Temp Tech Skinny Jean - Glowing Light03.jpg",
+          name: "American Eagle Temp Tech Skinny Jean - Glowing Light0",
+          price: "$210.0",
+        },
+        {
+          img: "img/Andora Full Buttons Down Plain Shirt - Light Grey20.jpg",
+          name: "Andora Full Buttons Down Plain Shirt - Light Grey",
+          price: "$260.0",
+        },
+        {
+          img: "img/Andora Over Size Brown Comfy Man Jacket13.jpg",
+          name: "Andora Over Size Brown Comfy Man Jacket",
+          price: "$230.0",
+        },
+        {
+          img: "img/Andora Self Pattern Hooded Jacket - Grey11.jpg",
+          name: "Andora Self Pattern Hooded Jacket - Grey",
+          price: "$305.0",
+        },
+        {
+          img: "img/Andora Slip On Bi- Tone Pullover - Grey & Black17.jpg",
+          name: "Andora Slip On Bi- Tone Pullover - Grey & Black.",
+          price: "$109.0",
+        },
+        {
+          img: "img/Bomber Zipped Jacket With Removable Hood - Black09.jpg",
+          name: "Bomber Zipped Jacket With Removable Hood - Black",
+          price: "$350.0",
+        },
+        {
+          img: "img/Dalydress Regular Fit Plain White Jeans07.jpg",
+          name: "Dalydress Regular Fit Plain White Jeans",
+          price: "$275.0",
+        },
+        {
+          img: "img/Defacto Man Beige Tricot Pullover16.jpg",
+          name: "Defacto Man Beige Tricot Pullover",
+          price: "$210.0",
+        },
+        {
+          img: "img/Defacto Man Beige Tricot Pullover18.jpg",
+          name: "Defacto Man Beige Tricot Pullover",
+          price: "$220.0",
+        },
+        {
+          img: "img/Defacto Man Blue Slim Fit Long Sleeve Jacket14.jpg",
+          name: "Defacto Man Blue Slim Fit Long Sleeve Jacket",
+          price: "$190.0",
+        },
+        {
+          img: "img/Defacto Man Ecru Woven Top Short Sleeve Shirt22.jpg",
+          name: "Defacto Man Ecru Woven Top Short Sleeve Shirt",
+          price: "$160.0",
+        },
+        {
+          img: "img/Defacto Man Grey Pedro-Slim Fit Denim Trousers05.jpg",
+          name: "Defacto Man Grey Pedro-Slim Fit Denim Trousers",
+          price: "$205.0",
+        },
+        {
+          img: "img/Defacto Man Multicolour Woven Top Long Sleeve Shirt21.jpg",
+          name: "Defacto Man Multicolour Woven Top Long Sleeve Shirt",
+          price: "$185.0",
+        },
+        {
+          img: "img/Dolab Ribbed Trim Drawstring Hoodie - Black20.jpg",
+          name: "Dolab Ribbed Trim Drawstring Hoodie - Black",
+          price: "$320.0",
+        },
+        {
+          img: "img/Fashion 2021 Graffiti Men's Canvas Sneakers Casual Shoes29.jpg",
+          name: "Fashion 2021 Graffiti Men's Canvas Sneakers Casual Shoes",
+          price: "$95.00",
+        },
+        {
+          img: "img/Fashion Men's Outdoor Shoes Suede Upper Slip26.jpg",
+          name: "Fashion Men's Outdoor Shoes Suede Upper Slip",
+          price: "$350.0",
+        },
+        {
+          img: "img/Fashion Men's PU Leather Cool Sneakers Shoes28.jpg",
+          name: "Fashion Men's PU Leather Cool Sneakers Shoes",
+          price: "$275.0",
+        },
+        {
+          img: "img/Fashion Men‘s Fashion Casual Sport Slim Jacket Coat-White12.jpg",
+          name: "Fashion Men‘s Fashion Casual Sport Slim Jacket Coat-White",
+          price: "$345.0",
+        },
+        {
+          img: "img/Hicool For Men - White Color15.jpg",
+          name: "Hicool For Men - White Color",
+          price: "$105.0",
+        },
+        {
+          img: "img/LC Waikiki Extra Slim Fit Striped Shirt21.jpg",
+          name: "LC Waikiki Extra Slim Fit Striped Shir",
+          price: "$95.00",
+        },
+        {
+          img: "img/Men Slim Jeans Trousers - Black01.jpg",
+          name: "/Men Slim Jeans Trousers - Blac",
+          price: "$245.0",
+        },
+        {
+          img: "img/Navy Blue Men's Trousers - Skinny Fit Jeans04.jpg",
+          name: "Navy Blue Men's Trousers - Skinny Fit Jeans",
+          price: "$280.0",
+        },
+        {
+          img: "img/Premoda Denim Skinny White Pants08.jpg",
+          name: "Premoda Denim Skinny White Pants",
+          price: "$300.0",
+        },
+      ];
+
+      let currentIndex = 0;
+      const itemsPerPage = 9;
+      const productList = document.getElementById("product-list");
+      const loadMoreBtn = document.getElementById("loadMore");
+
+      const renderProducts = () => {
+        products
+          .slice(currentIndex, currentIndex + itemsPerPage)
+          .forEach((p) => {
+            productList.innerHTML += `
+      <div class="col-md-4">
+        <div class="card product-card p-3 border">
+          <img src="${p.img}" class="card-img-top" alt="${p.name}">
+          <div class="d-flex justify-content-center gap-3 my-2">
+            <i class="fa-regular fa-heart fs-5 text-dark"></i>
+            <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
+          </div>
+          <h5 class="text-center">${p.name}</h5>
+          <p class="text-center fw-bold mb-0">${p.price}</p>
+        </div>
+      </div>`;
+          });
+        currentIndex += itemsPerPage;
+        if (currentIndex >= products.length) loadMoreBtn.style.display = "none";
+      };
+
+      loadMoreBtn.addEventListener("click", renderProducts);
+      renderProducts();
+    </script>
+
+    <!----------------------------------- Footer--------------------------------------------------- -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row text-center text-md-start gy-6">
+          <div
+            class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start"
+          >
+            <i class="fa-solid fa-user-secret me-3"></i>
+            <h1 class="mb-0 footer-brand text-uppercase">
+              DOKAN<br /><span class="fw-bold">SHOP</span>
+            </h1>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <h5 class="text-uppercase">Shopping & Categories</h5>
+            <ul class="list-unstyled p-2">
+              <li class="p-2"><a href="#">Men's shopping</a></li>
+              <li class="p-2"><a href="#">Women's shopping</a></li>
+              <li class="p-2"><a href="#">Kid's shopping</a></li>
+              <li class="p-2"><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <h5 class="text-uppercase">Useful Links</h5>
+            <ul class="list-unstyled p-2">
+              <li class="p-2"><a href="#">Home Page</a></li>
+              <li class="p-2"><a href="#">About Us</a></li>
+              <li class="p-2"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <h5 class="text-uppercase">Help & Information</h5>
+            <ul class="list-unstyled p-2">
+              <li class="p-2"><a href="#">Help</a></li>
+              <li class="p-2"><a href="#">FAQ'S</a></li>
+              <li class="p-2"><a href="#">Track Your Shipping</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="footer-bottom text-center mt-5 pt-4 border-top border-white"
+        >
+          <p class="mb-3">
+            Copyright © 2022 DokanShop Co., Ltd. All Rights Reserved.
+          </p>
+          <div class="mb-3">
+            <a href="#" class="me-3 fs-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="me-3 fs-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-3 fs-3"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="fs-3"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div id="clock" class="clock"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-key.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function updateClock() {
+        let now = new Date();
+        let hours = now.getHours().toString().padStart(2, "0");
+        let minutes = now.getMinutes().toString().padStart(2, "0");
+        let seconds = now.getSeconds().toString().padStart(2, "0");
+        document.getElementById(
+          "clock"
+        ).textContent = `${hours} : ${minutes} : ${seconds}`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

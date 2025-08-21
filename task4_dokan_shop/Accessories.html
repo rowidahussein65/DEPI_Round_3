@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Accessories.css" />
+    <link rel="icon" href="img/main-logo.png" />
+    <title>Dokan Shop |Accessories</title>
+  </head>
+  <body>
+    <!------------------------------ Navbar-------------------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="fa-solid fa-user-secret me-2"></i> Dokan Shop
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          title="nav_button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Latest Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Top Deals</a>
+            </li>
+            <li class="nav-item register">
+              <a class="nav-link" href="index.html">Log In</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="pagesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu bg-dark" aria-labelledby="pagesDropdown">
+                <li>
+                  <a class="dropdown-item text-white" href="AboutUs.html"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="men.html">Men's</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="women.html"
+                    >Women's</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="Kids.html">Kids</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="Accessories.html"
+                    >Accessories</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider border-light" /></li>
+                <li>
+                  <a class="dropdown-item text-white" href="ContactUs.html"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!---------------------------- Hero Section-------------------------------------------- -->
+    <section class="hero-section d-flex align-items-center">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container text-center text-white">
+        <h1 class="fw-bold mb-3">Check our products</h1>
+        <p class="lead mx-auto" style="max-width: 800px">
+          "Style is something each of us already has, all we need to do is find
+          it."
+        </p>
+      </div>
+    </section>
+
+    <!-----------------------------men's fashion--------------------------------------------------------->
+
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Accessories</h2>
+        <p class="text-muted">Check out all of our products</p>
+      </div>
+
+      <div id="product-list" class="row g-4"></div>
+
+      <button id="loadMore" class="btn btn-secondary mt-4 d-block mx-auto">
+        Load More
+      </button>
+    </div>
+
+    <script>
+      const products = [
+        {
+          img: "img/2018 New Charm Trendy Imperial Golden&Black Crown Bracelets Men Natural Stone Beads Bracelet For Women Men Jewelry Accessories16.jpg",
+          name: "New Charm Trendy Imperial Golden&Black Crown Bracelets Men Natural Stone Beads Bracelet For Women Men Jewelry Accessories",
+          price: "$45.00",
+        },
+        {
+          img: "img/2021 Metal Fashion Face Masking Holder Accessories Spectacles Eyewear Eye Glasses Sunglasses Eyeglasses Chain21.jpg",
+          name: "Metal Fashion Face Masking Holder Accessories Spectacles Eyewear Eye Glasses Sunglasses Eyeglasses Chain",
+          price: "$80.00",
+        },
+        {
+          img: "img/2021 new fashionable candy color cross headband bow hairband makeup wash face headband hair accessories for women07.jpg",
+          name: "new fashionable candy color cross headband bow hairband makeup wash face headband hair accessories for women",
+          price: "$25.00",
+        },
+        {
+          img: "img/2021 NEW Girl tassel Rhinestone Spring Ponytail Hairpin Luxury Temperament Accessories08.jpg",
+          name: "NEW Girl tassel Rhinestone Spring Ponytail Hairpin Luxury Temperament Accessories",
+          price: "$70.00",
+        },
+        {
+          img: "img/41313 wholesale china turkish jewelry accessories 18k delicate evil design eye gold plated jewelry necklace02.jpg",
+          name: "wholesale china turkish jewelry accessories 18k delicate evil design eye gold plated jewelry necklace",
+          price: "$45.00",
+        },
+        {
+          img: "img/5 in 1 Multifunction foldable waterproof mummy baby diaper bag backpack with custom logo24.jpg",
+          name: "5 in 1 Multifunction foldable waterproof mummy baby diaper bag backpack with custom logo",
+          price: "$550.0",
+        },
+        {
+          img: "img/7 Chakra Handmade Macrame Braided Jewelry Prayer 8mm Turquoise Tiger Eye Bead Thread Beads Mens Accessories Bracelet17.jpg",
+          name: "Chakra Handmade Macrame Braided Jewelry Prayer 8mm Turquoise Tiger Eye Bead Thread Beads Mens Accessories Bracelet",
+          price: "$35.00",
+        },
+        {
+          img: "img/Baby Girl Big Bow Hair Accessories Elastic Ribbed Cotton Hair Bands Hairband for Kids Baby Top Kont Bow Headbands27.jpg",
+          name: "Baby Girl Big Bow Hair Accessories Elastic Ribbed Cotton Hair Bands Hairband for Kids Baby Top Kont Bow Headbands",
+          price: "$15.00",
+        },
+        {
+          img: "img/Baby Girl Bows Headband Lace Elastic Princess Headband for Girl Infant Kids Hair Band Accessories26.jpg",
+          name: "Baby Girl Bows Headband Lace Elastic Princess Headband for Girl Infant Kids Hair Band Accessories.",
+          price: "$45.00",
+        },
+        {
+          img: "img/Fashion Pearl Bridal bracelet gold plated women pearl bracelet handmade shell pearl bracelet01.png",
+          name: "Fashion Pearl Bridal bracelet gold plated women pearl bracelet handmade shell pearl bracelet",
+          price: "$80.00",
+        },
+        {
+          img: "img/Gemstone Beaded Bracelets Custom Bead Crystal Healing Stones Bracelet Adjustable Imperial Darth Vader Design for Women and Men19.jpg",
+          name: "Gemstone Beaded Bracelets Custom Bead Crystal Healing Stones Bracelet Adjustable Imperial Darth Vader Design for Women and Men",
+          price: "$15.00",
+        },
+        {
+          img: "img/Gold Color Crystal Key Pendant Necklace Fashion Nice Key Pendant Necklace Elegant Jewelry Accessories For Women10.jpg",
+          name: "Gold Color Crystal Key Pendant Necklace Fashion Nice Key Pendant Necklace Elegant Jewelry Accessories For Women",
+          price: "$375.0",
+        },
+        {
+          img: "img/Hiphop Fashion Rap Pink Zirconia Sexy Bite Lip Gold Tooth Pendant Necklace Exaggerated Cuban Chain Accessories06.jpg",
+          name: "Hiphop Fashion Rap Pink Zirconia Sexy Bite Lip Gold Tooth Pendant Necklace Exaggerated Cuban Chain Accessories",
+          price: "$105.0",
+        },
+        {
+          img: "img/Hot Selling Astronaut Magnet Necklace Bracelet Jewelry Creative Magnetic Necklace Couple Fashion Accessories Jewelry03.jpg",
+          name: "Hot Selling Astronaut Magnet Necklace Bracelet Jewelry Creative Magnetic Necklace Couple Fashion Accessories Jewelry",
+          price: "$180.0",
+        },
+        {
+          img: "img/Lucky Classical Different Colors Finger Chain Ring Gold Plated Titanium Steel Men's Ring13.jpg",
+          name: "Lucky Classical Different Colors Finger Chain Ring Gold Plated Titanium Steel Men's Ring1",
+          price: "$275.00",
+        },
+        {
+          img: "img/New accessories 26 English letter necklace hip hop Cuban chain European and American fashion personality necklace11.jpg",
+          name: "New accessories 26 English letter necklace hip hop Cuban chain European and American fashion personality necklace",
+          price: "$95.00",
+        },
+        {
+          img: "img/New Trendy Woven Handmade men braided titanium steel bracelet horseshoe buckle stainless steel jewelry woven bracelet18.jpg",
+          name: "New Trendy Woven Handmade men braided titanium steel bracelet horseshoe buckle stainless steel jewelry woven bracelet",
+          price: "$15.00",
+        },
+        {
+          img: "img/Nylon Kids Headbands Simple Design Newborn Baby Girl Hair Band Elastic Soft Fabric Flower Baby Bow Custom Thin Headband25.jpg",
+          name: "Nylon Kids Headbands Simple Design Newborn Baby Girl Hair Band Elastic Soft Fabric Flower Baby Bow Custom Thin Headband",
+          price: "25.00",
+        },
+        {
+          img: "img/PET child face shield kids face shields protective full cover face shield for kids22.jpg",
+          name: "PET child face shield kids face shields protective full cover face shield for kids",
+          price: "$75.00",
+        },
+        {
+          img: "img/Quartz Wristwatch Alloy Strap Ladies Casual Round Rose Gold Watches Bracelet Set Fashion Jewelry Accessories04.jpg",
+          name: "Quartz Wristwatch Alloy Strap Ladies Casual Round Rose Gold Watches Bracelet Set Fashion Jewelry Accessories",
+          price: "$225.0",
+        },
+        {
+          img: "img/R.Gem. 3.5.7mm Chunky Miami Stainless Steel Cuban Chain for Men Women15.jpg",
+          name: "R.Gem. 3.5.7mm Chunky Miami Stainless Steel Cuban Chain for Men Women1",
+          price: "$170.0",
+        },
+        {
+          img: "img/Ice Club Double Closure Shiny Leather Boot - Black26.jpg",
+          name: "Ice Club Double Closure Shiny Leather Boot - Black",
+          price: "$340.0",
+        },
+        {
+          img: "imG/Mothercare Mustard Shorts03.jpg",
+          name: "Mothercare Mustard Shorts",
+          price: "$70.00",
+        },
+        {
+          img: "img/Set Hiphop Men Bracelet Jewelry Set Stainless Steel Rome Numbers Engraved Bangle Braided Bracelet Wholesale14.jpg",
+          name: "Set Hiphop Men Bracelet Jewelry Set Stainless Steel Rome Numbers Engraved Bangle Braided Bracelet Wholesale",
+          price: "$95.00",
+        },
+        {
+          img: "img/Wholesale Simple Fashion Golden Bracelet Female Titanium Steel Plated 18k Rose Gold couple Bracelet Wrist Accessories05.jpg",
+          name: "Wholesale Simple Fashion Golden Bracelet Female Titanium Steel Plated 18k Rose Gold couple Bracelet Wrist Accessories",
+          price: "$90.00",
+        },
+        {
+          img: "img/Wholesale 14 PCS.set Colorful Flower Kids Hair Accessories Rainbow Hairpin Cute Hair Clips For Girls20.jpg",
+          name: "Wholesale 14 PCS.set Colorful Flower Kids Hair Accessories Rainbow Hairpin Cute Hair Clips For Girls",
+          price: "$85.00",
+        },
+        {
+          img: "img/Yingchao 2022 Fashion Hot Sale 18K Gold Plated Statement Dangling Hoop Drop Earrings for Women jewelry accessories12.jpg",
+          name: "Yingchao 2022 Fashion Hot Sale 18K Gold Plated Statement Dangling Hoop Drop Earrings for Women jewelry accessories",
+          price: "$315.0",
+        },
+      ];
+
+      let currentIndex = 0;
+      const itemsPerPage = 9;
+      const productList = document.getElementById("product-list");
+      const loadMoreBtn = document.getElementById("loadMore");
+
+      const renderProducts = () => {
+        products
+          .slice(currentIndex, currentIndex + itemsPerPage)
+          .forEach((p) => {
+            productList.innerHTML += `
+      <div class="col-md-4">
+        <div class="card product-card p-3 border">
+          <img src="${p.img}" class="card-img-top" alt="${p.name}">
+          <div class="d-flex justify-content-center gap-3 my-2">
+            <i class="fa-regular fa-heart fs-5 text-dark"></i>
+            <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
+          </div>
+          <h5 class="text-center">${p.name}</h5>
+          <p class="text-center fw-bold mb-0">${p.price}</p>
+        </div>
+      </div>`;
+          });
+        currentIndex += itemsPerPage;
+        if (currentIndex >= products.length) loadMoreBtn.style.display = "none";
+      };
+
+      loadMoreBtn.addEventListener("click", renderProducts);
+      renderProducts();
+    </script>
+    <!----------------------------------- Footer--------------------------------------------------- -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row text-center text-md-start gy-6">
+          <div
+            class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start"
+          >
+            <i class="fa-solid fa-user-secret me-3"></i>
+            <h1 class="mb-0 footer-brand text-uppercase">
+              DOKAN<br /><span class="fw-bold">SHOP</span>
+            </h1>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <h5 class="text-uppercase">Shopping & Categories</h5>
+            <ul class="list-unstyled p-2">
+              <li class="p-2"><a href="#">Men's shopping</a></li>
+              <li class="p-2"><a href="#">Women's shopping</a></li>
+              <li class="p-2"><a href="#">Kid's shopping</a></li>
+              <li class="p-2"><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <h5 class="text-uppercase">Useful Links</h5>
+            <ul class="list-unstyled p-2">
+              <li class="p-2"><a href="#">Home Page</a></li>
+              <li class="p-2"><a href="#">About Us</a></li>
+              <li class="p-2"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-2 text-center">
+            <h5 class="text-uppercase">Help & Information</h5>
+            <ul class="list-unstyled p-2">
+              <li class="p-2"><a href="#">Help</a></li>
+              <li class="p-2"><a href="#">FAQ'S</a></li>
+              <li class="p-2"><a href="#">Track Your Shipping</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="footer-bottom text-center mt-5 pt-4 border-top border-white"
+        >
+          <p class="mb-3">
+            Copyright © 2022 DokanShop Co., Ltd. All Rights Reserved.
+          </p>
+          <div class="mb-3">
+            <a href="#" class="me-3 fs-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="me-3 fs-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-3 fs-3"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="fs-3"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div id="clock" class="clock"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-key.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function updateClock() {
+        let now = new Date();
+        let hours = now.getHours().toString().padStart(2, "0");
+        let minutes = now.getMinutes().toString().padStart(2, "0");
+        let seconds = now.getSeconds().toString().padStart(2, "0");
+        document.getElementById(
+          "clock"
+        ).textContent = `${hours} : ${minutes} : ${seconds}`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

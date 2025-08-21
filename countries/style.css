@@ -1,0 +1,11 @@
+#countryBox {
+  background-color: #6c757d; 
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  display: none;
+}
+#countryBox img {
+  max-width: 300px;
+  margin-top: 1rem;
+}

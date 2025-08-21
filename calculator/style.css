@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eee;
+}
+.calc {
+  background: #fff;
+  padding: 2em;
+  border-radius: 1em;
+  width: 80%;
+  max-width: 20em;
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
+}
+.screen {
+  background: red;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: right;
+  border: none;
+  border-radius: 0.5em;
+  height: 3em;
+  margin-bottom: 1em;
+  padding-right: 0.5em;
+}
+.btn-circle {
+  border-radius: 50% !important;
+  width: 3em;
+  height: 3em;
+  font-size: 1em;
+}
+.btn-equal {
+  width: 100%;
+  border-radius: 0.5em;
+  background: green;
+  color: #fff;
+  font-size: 1.2em;
+}
+.btn-del {
+  background: brown;
+  color: #fff;
+}
+.btn-c {
+  background: red;
+  color: #fff;
+}
