@@ -9,7 +9,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-light vh-100 d-flex align-items-center justify-content-center">
+  <body
+    class="bg-light vh-100 d-flex align-items-center justify-content-center"
+  >
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <!-- Left side: Facebook text -->
@@ -17,30 +19,39 @@
           <h1 class="text-primary fw-bold display-3">Facebook</h1>
           <p class="fs-4 text-secondary lh-sm m-0">
             <span class="d-block d-md-inline">Connect with friends</span>
-            <span class="d-block d-md-inline">and the world around you on Facebook.</span>
+            <span class="d-block d-md-inline">
+              and the world around you on Facebook.
+            </span>
           </p>
         </div>
 
         <!-- Right side: Login form -->
         <div class="col-lg-4 col-md-8">
           <div class="bg-white shadow rounded px-4 py-5">
-            <form>
+            <form id="loginForm" novalidate>
+              <!-- Username -->
               <div class="mb-3">
                 <input
                   type="text"
+                  id="username"
                   class="form-control"
-                  placeholder="Email address or phone number"
+                  placeholder="Username"
                 />
+                <div id="userError" class="text-danger small mt-1"></div>
               </div>
 
+              <!-- Password -->
               <div class="mb-2">
                 <input
                   type="password"
+                  id="password"
                   class="form-control"
                   placeholder="Password"
                 />
+                <div id="passError" class="text-danger small mt-1"></div>
               </div>
 
+              <!-- Show password -->
               <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="showPass" />
                 <label
@@ -51,6 +62,7 @@
                 </label>
               </div>
 
+              <!-- Login button -->
               <div class="d-grid mb-3">
                 <button type="submit" class="btn btn-primary fw-bold">
                   Log In
@@ -66,15 +78,18 @@
               <hr />
 
               <div class="d-grid">
-                <button type="button" class="btn btn-success fw-bold">
+                <a href="singnup.html" class="btn btn-success fw-bold">
                   Create New Account
-                </button>
+                </a>
               </div>
             </form>
           </div>
 
           <div class="text-center mt-3">
-            <a href="#" class="fw-bold text-primary text-decoration-none">
+            <a
+              href="signup.html"
+              class="fw-bold text-primary text-decoration-none"
+            >
               Create a Page
             </a>
             <span class="text-muted">
@@ -84,5 +99,8 @@
         </div>
       </div>
     </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
